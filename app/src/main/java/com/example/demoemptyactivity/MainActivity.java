@@ -21,12 +21,15 @@ public class MainActivity extends AppCompatActivity {
         Button registerBtn = findViewById(R.id.btn1);
         Button loginBtn = findViewById(R.id.btn2);
 
-        // Ekranu rejestracji jeszcze nie ma - na razie prowadzi do logowania
-        registerBtn.setOnClickListener(v ->
-                startActivity(new Intent(MainActivity.this, LoginActivity.class)));
-        loginBtn.setOnClickListener(v ->
-                startActivity(new Intent(MainActivity.this, LoginActivity.class)));
+        loginBtn.setOnClickListener(v ->{
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        });
 
+        registerBtn.setOnClickListener(v ->{
+            Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+            startActivity(intent);
+        });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

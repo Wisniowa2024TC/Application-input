@@ -18,12 +18,19 @@ public class LoginActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        Button loginBtn = findViewById(R.id.btnLogin);
-        loginBtn.setOnClickListener(v -> {
-            startActivity(new Intent(LoginActivity.this, UserInterfaceActivity.class));
+        Button loginBtn = findViewById(R.id.btn_login);
+        Button backBtn = findViewById(R.id.btn_back);
+
+        loginBtn.setOnClickListener(v ->{
+            Intent intent = new Intent(LoginActivity.this, UserInterfaceActivity.class);
+            startActivity(intent);
             finish();
         });
 
+        backBtn.setOnClickListener(v ->{
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
