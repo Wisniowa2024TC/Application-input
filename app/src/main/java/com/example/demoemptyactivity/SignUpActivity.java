@@ -21,16 +21,9 @@ public class SignUpActivity extends AppCompatActivity {
         Button registerBtn = findViewById(R.id.btn_register);
         Button backBtn = findViewById(R.id.btn_back);
 
-        registerBtn.setOnClickListener(v ->{
-            Intent intent = new Intent(SignUpActivity.this, UserInterfaceActivity.class);
-            startActivity(intent);
-            finish();
-        });
+        registerBtn.setOnClickListener(v -> openHome());
 
-        backBtn.setOnClickListener(v ->{
-            Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-            startActivity(intent);
-        });
+        backBtn.setOnClickListener(v -> finish());
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -38,6 +31,12 @@ public class SignUpActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    private void openHome() {
+        String role = getIntent().getStringExtra(RoleSelectionActivity.EXTRA_ROLE);
+        Class<?> target = RoleSelectionActivity.ROLE_COURIER.equals(role)
+                ? CourierInterfaceActivity.class : UserInterfaceActivity.class;
+        startActivity(new Intent(this, target));
+        finish();
+    }
 }
-
-

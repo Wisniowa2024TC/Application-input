@@ -23,11 +23,13 @@ public class MainActivity extends AppCompatActivity {
 
         loginBtn.setOnClickListener(v ->{
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            intent.putExtra(RoleSelectionActivity.EXTRA_ROLE, getIntent().getStringExtra(RoleSelectionActivity.EXTRA_ROLE));
             startActivity(intent);
         });
 
         registerBtn.setOnClickListener(v ->{
             Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+            intent.putExtra(RoleSelectionActivity.EXTRA_ROLE, getIntent().getStringExtra(RoleSelectionActivity.EXTRA_ROLE));
             startActivity(intent);
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

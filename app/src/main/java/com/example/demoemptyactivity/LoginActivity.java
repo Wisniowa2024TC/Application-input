@@ -21,20 +21,21 @@ public class LoginActivity extends AppCompatActivity {
         Button loginBtn = findViewById(R.id.btn_login);
         Button backBtn = findViewById(R.id.btn_back);
 
-        loginBtn.setOnClickListener(v ->{
-            Intent intent = new Intent(LoginActivity.this, UserInterfaceActivity.class);
-            startActivity(intent);
-            finish();
-        });
+        loginBtn.setOnClickListener(v -> openHome());
 
-        backBtn.setOnClickListener(v ->{
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(intent);
-        });
+        backBtn.setOnClickListener(v -> finish());
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    private void openHome() {
+        String role = getIntent().getStringExtra(RoleSelectionActivity.EXTRA_ROLE);
+        Class<?> target = RoleSelectionActivity.ROLE_COURIER.equals(role)
+                ? CourierInterfaceActivity.class : UserInterfaceActivity.class;
+        startActivity(new Intent(this, target));
+        finish();
     }
 }
