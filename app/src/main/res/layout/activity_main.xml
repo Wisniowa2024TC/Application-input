@@ -6,36 +6,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:text="INPUT" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Twój własny paczkomat!"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn1"
-        android:text="Zarejestruj się" />
+        android:layout_marginTop="25dp">
 
-    <Button
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="25dp"
+        android:src="@drawable/fav2"
+        android:scaleType="fitCenter"
+        android:contentDescription="Logo"/>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn2"
-        android:text="Zaloguj się" />
+        android:textSize="50sp"
+        android:textColor="#0C1A52"
+        android:text="INPUT"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0C1A52"
+        android:textSize="20sp"
+        android:text="Zamów. Odbierz. Zjedz!"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/felis"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="40dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="150dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/btn2"
+            app:backgroundTint="#1E3A8A"
+            android:text="Zaloguj się"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/btn1"
+            app:backgroundTint="#FFF"
+            app:strokeColor="#1E3A8A"
+            app:strokeWidth="1dp"
+            android:textColor="#0C1A52"
+            android:text="Zarejestruj się" />
+
+
     </LinearLayout>
 
     
