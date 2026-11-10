@@ -60,20 +60,22 @@
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="60dp"
             android:layout_marginBottom="5dp"
             android:id="@+id/btn2"
             app:backgroundTint="#1E3A8A"
+            android:textSize="18sp"
             android:text="Zaloguj się"/>
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="60dp"
             android:id="@+id/btn1"
             app:backgroundTint="#FFF"
             app:strokeColor="#1E3A8A"
             app:strokeWidth="1dp"
             android:textColor="#0C1A52"
+            android:textSize="18sp"
             android:text="Zarejestruj się" />
 
 

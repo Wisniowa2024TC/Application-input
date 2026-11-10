@@ -5,23 +5,67 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".LoginActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Witaj ponownie! Zaloguj się na swoje konto!"/>
+        android:layout_marginBottom="15dp"
+        android:textSize="25sp"
+        android:text="Witaj ponownie!"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textSize="18sp"
+        android:text="Kim jesteś?"/>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="50dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Klient"
+            app:strokeColor="#CCCCCC"
+            app:strokeWidth="1dp"
+            app:backgroundTint="#6479B3"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_courier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kurier"
+            app:strokeColor="#CCCCCC"
+            app:strokeWidth="1dp"
+            app:backgroundTint="#384E8C"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Zaloguj się na swoje konto!"/>
 
     <EditText
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Nazwa użytkownika" ></EditText>
+        android:layout_height="80dp"
+        android:hint="Nazwa użytkownika" />
 
     <EditText
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:hint="Hasło"
-        android:inputType="textPassword"></EditText>
+        android:inputType="textPassword" />
 
     <Button
         android:layout_width="wrap_content"
