@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Treść okienka z maskotką (Mascot.dialog). Przyciski dodaje AlertDialog. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="20dp">
+
+    <ImageView
+        android:id="@+id/iv_mascot"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:contentDescription="Maskotka INPUT"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/maskotka_sukces" />
+
+    <TextView
+        android:id="@+id/tv_mascot_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/navy_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="Zamówienie przyjęte!" />
+
+    <TextView
+        android:id="@+id/tv_mascot_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp"
+        tools:text="Planowana dostawa ok. 12:30" />
+</LinearLayout>

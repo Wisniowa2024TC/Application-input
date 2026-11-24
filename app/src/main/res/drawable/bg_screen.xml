@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tło wszystkich ekranów: delikatny przejście od różu (góra) do błękitu (dół). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="270"
+        android:endColor="#EEF2FF"
+        android:startColor="#FFF5F9" />
+</shape>

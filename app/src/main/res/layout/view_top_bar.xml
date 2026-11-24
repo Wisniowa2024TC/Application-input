@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Górny pasek wspólny dla panelu klienta i kuriera (wstawiany przez <include>).
+    Lewo: menu (profil, o aplikacji, wyloguj). Środek: logo. Prawo: profil (klient) albo dzwonek (kurier).
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:paddingHorizontal="8dp">
+
+    <ImageButton
+        android:id="@+id/btn_menu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="start|center_vertical"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Menu"
+        android:src="@drawable/ic_menu" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="6dp"
+            android:contentDescription="Logo INPUT"
+            android:src="@drawable/fav2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INPUT"
+            android:textColor="@color/navy_dark"
+            android:textSize="28sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end|center_vertical">
+
+        <ImageButton
+            android:id="@+id/btn_top_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Profil"
+            android:src="@drawable/ic_person" />
+
+        <!-- Różowa kropka "masz coś nowego" (np. jedzenie do odebrania z restauracji dla kuriera) -->
+        <View
+            android:id="@+id/top_dot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="11dp"
+            android:background="@drawable/bg_dot"
+            android:visibility="gone" />
+    </FrameLayout>
+</FrameLayout>

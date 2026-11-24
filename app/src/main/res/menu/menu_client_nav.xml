@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dolne menu klienta (jak na makiecie). Kliknięcia obsługuje ClientActivity. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Strona główna" />
+    <item
+        android:id="@+id/nav_orders"
+        android:icon="@drawable/ic_bag"
+        android:title="Moje zamówienia" />
+    <item
+        android:id="@+id/nav_lockers"
+        android:icon="@drawable/ic_box"
+        android:title="Paczkomat" />
+</menu>

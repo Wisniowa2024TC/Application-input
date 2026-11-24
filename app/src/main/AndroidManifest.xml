@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Aplikacja łączy się z serwerem INPUT przez internet / sieć lokalną. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+        usesCleartextTraffic="true" – pozwala łączyć się przez zwykłe HTTP (bez HTTPS).
+        Szkolny serwer działa na laptopie / Raspberry Pi bez certyfikatu SSL.
+        W prawdziwej aplikacji serwer musiałby mieć HTTPS.
+    -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,24 +19,52 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoEmptyActivity"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
-        <activity android:name=".ClientActivity" android:exported="false" />
-        <activity android:name=".CourierActivity" android:exported="false" />
-
-        <activity android:name=".SignUpActivity" android:exported="false" />
-        <activity android:name=".LoginActivity" android:exported="false" />
-
+        <!-- Ekran startowy (uruchamiany po kliknięciu ikony) -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
+        <!-- Logowanie i rejestracja -->
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".auth.SignUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Panele po zalogowaniu -->
+        <activity
+            android:name=".client.ClientActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".courier.CourierActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Szczegóły zamówienia (klient i kurier) -->
+        <activity
+            android:name=".common.OrderDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".client.CartActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

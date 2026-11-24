@@ -1,0 +1,11 @@
+# Pliki tworzone podczas działania serwera
+*.db
+*.db-journal
+
+# Gradle / IntelliJ
+.gradle/
+build/
+*/build/
+.idea/
+*.iml
+out/

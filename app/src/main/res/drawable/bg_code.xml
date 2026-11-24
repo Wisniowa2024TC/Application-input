@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ramka wokół kodu nadania / odbioru (przerywana linia jak na bilecie). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/white" />
+    <stroke
+        android:width="2dp"
+        android:color="@color/navy"
+        android:dashGap="6dp"
+        android:dashWidth="10dp" />
+    <corners android:radius="16dp" />
+</shape>

@@ -1,50 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<!--
+    Panel kuriera: górny pasek + miejsce na zakładkę (fragment) + dolne menu.
+    Zakładki: Zlecenia, Paczkomaty, Statystyki.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    tools:context=".CourierActivity">
+    tools:context=".courier.CourierActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <include layout="@layout/view_top_bar" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp">
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginRight="25dp"
-            android:src="@drawable/fav2"
-            android:scaleType="fitCenter"
-            android:contentDescription="Logo"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:textColor="#0C1A52"
-            android:text="INPUT"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#0C1A52"
-        android:textSize="20sp"
-        android:text="Zamów. Odbierz. Zjedz!"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/felis"
-        android:scaleType="fitCenter"
-        android:layout_marginTop="40dp"/>
-
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+        android:background="@color/white"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_courier_nav" />
+</LinearLayout>

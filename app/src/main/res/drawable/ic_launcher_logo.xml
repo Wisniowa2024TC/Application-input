@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Logo INPUT jako ikona aplikacji – z marginesem, żeby nie zostało przycięte przez kształt ikony. -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/fav2"
+    android:inset="22%" />

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    "Stan ekranu" z maskotką: ładowanie, pusta lista albo błąd.
+    Dołączany do innych layoutów przez <include>, obsługiwany przez klasę Mascot.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mascot_state"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingVertical="16dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <ImageView
+        android:id="@+id/iv_mascot"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="Maskotka INPUT"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/maskotka_szukam" />
+
+    <TextView
+        android:id="@+id/tv_mascot_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/navy_dark"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:text="Nic tu jeszcze nie ma" />
+
+    <TextView
+        android:id="@+id/tv_mascot_message"
+        style="@style/Text.Secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        tools:text="Zamów coś pysznego!" />
+
+    <Button
+        android:id="@+id/btn_mascot_action"
+        style="@style/Button.Outline"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="24dp"
+        android:textSize="15sp"
+        android:visibility="gone"
+        tools:text="Spróbuj ponownie"
+        tools:visibility="visible" />
+</LinearLayout>

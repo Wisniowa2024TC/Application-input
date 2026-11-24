@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Kolory aplikacji INPUT (na podstawie projektu graficznego).
+    Używaj ich przez @color/nazwa zamiast wpisywać kody kolorów w każdym pliku.
+-->
 <resources>
+    <!-- Granat – główny kolor marki (przyciski, ikony, aktywne zakładki) -->
+    <color name="navy">#1E3A8A</color>
+    <!-- Ciemny granat – nagłówki i logo -->
+    <color name="navy_dark">#0C1A52</color>
+    <!-- Szary tekst pomocniczy -->
+    <color name="text_secondary">#5B6478</color>
+    <color name="text_hint">#8A93A8</color>
+
+    <!-- Jasnoniebieskie tła kart i ikon -->
+    <color name="blue_light">#E8EEFB</color>
+    <color name="card_stroke">#DCE3F5</color>
+
+    <!-- Różowe akcenty (serduszka, kody) -->
+    <color name="pink">#DB2777</color>
+    <color name="pink_light">#FCE7F3</color>
+
+    <!-- Tło ekranów -->
+    <color name="background">#FFF8FB</color>
+    <color name="status_bar">#FFF5F9</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
